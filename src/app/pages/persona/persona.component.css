@@ -1,0 +1,33 @@
+.parrafo{
+    text-align: justify;
+    padding: 5px;
+}
+
+.title{
+    text-align: center;
+}
+
+.tabla{
+    border-collapse: collapse; 
+    width: 50%; 
+    border: 1px solid;
+}
+
+.tabla thead{
+    background-color: #640570; 
+    color: white; 
+    border: 1px solid ;
+}
+
+.tabla tbody{
+    border: 1px solid;
+}
+
+.tabla tbody tr{
+    background-color:#f2f2f2; 
+    border: 1px solid ;
+}
+
+.tabla tbody tr td {
+    border: 1px solid
+}

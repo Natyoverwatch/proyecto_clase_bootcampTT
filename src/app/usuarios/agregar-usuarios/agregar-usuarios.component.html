@@ -1,0 +1,55 @@
+<div class="container mt-3 p-4 mb-5">
+  <h1 class="text-center">Crear Un Usuario</h1>
+  <form
+    [formGroup]="datoFormUser"
+    (submit)="agregarUser()"
+    style="display: flex; flex-direction: column"
+  >
+    <label for="Nombre">Nombre:</label>
+    <input
+      type="text"
+      formControlName="nombre"
+      placeholder="Ingrese el nombre"
+    />
+
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      formControlName="email"
+      placeholder="Ingrese el email del cliente"
+    />
+
+    <label for="Nombre">Tipo de Documento:</label>
+    <input
+      type="text"
+      formControlName="tipoDocumento"
+      placeholder="Ingrese el tipo de documento"
+    />
+
+    <label for="numeroDocumento">Numero de Documento:</label>
+    <input
+      type="text"
+      formControlName="numeroDocumento"
+      placeholder="Ingrese el Numero Documento"
+    />
+
+    <label for="login">login:</label>
+    <input type="text" formControlName="login" placeholder="Ingrese el login" />
+
+    <label for="password">password:</label>
+    <input
+      type="password"
+      formControlName="password"
+      placeholder="Ingrese la contraseña"
+    />
+
+    <label for="rol">Rol:</label>
+    <input type="text" formControlName="rol" placeholder="Ingrese el rol" />
+
+    <button class="btn btn-primary" type="submit">Crear Usuario</button>
+
+    <button class="btn btn-danger" type="button">
+      <a routerLink="./../clientes"> Cancelar</a>
+    </button>
+  </form>
+</div>

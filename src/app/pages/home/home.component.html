@@ -1,0 +1,33 @@
+<div>
+  <h1>Proyecto inicial en Angular</h1>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+    exercitationem, dolorem iusto non et fugiat voluptates, placeat aut atque
+    quis, ea vero molestiae dolor quam modi laborum commodi quaerat cupiditate.
+  </p>
+  <div style="display: flex; align-items: center; justify-content: center">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/7wtfhZwyrcc?si=KvLJd58SEaEru4EH"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    >
+    </iframe>
+  </div>
+  <p>Hola, mi nombre es {{ nombre }}</p>
+  <button (click)="mostrarModal()">Mostrar Alerta</button>
+  <hr />
+  <div class="mySlides fade">
+    <img src="../../../assets/images/gato.jpg" style="width: 50%" />
+    <div class="text">Caption Text</div>
+  </div>
+  <div class="mySlides fade">
+    <img src="../../../assets/images/perro.jpg" style="width: 50%" />
+    <div class="text">Caption Two</div>
+  </div>
+  <app-persona></app-persona>
+</div>

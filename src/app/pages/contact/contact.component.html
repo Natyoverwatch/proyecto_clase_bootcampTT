@@ -1,0 +1,49 @@
+<p>contact works!</p>
+
+<h1>Formulario de Contacto</h1>
+<div class="container">
+  <form [formGroup]="contactoForm" (submit)="enviarContacto()">
+    <label for="nombre">Nombres</label>
+    <input
+      type="text"
+      id="nombre"
+      formControlName="nombres"
+      placeholder="Tu nombre.."
+    />
+
+    <label for="Apellidos">Apellido</label>
+    <input
+      type="text"
+      id="apellido"
+      formControlName="apellidos"
+      placeholder="Tu apellido.."
+    />
+
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" formControlName="email" />
+
+    <label for="ciudad">Ciudad</label>
+    <select id="ciudad" formControlName="ciudad">
+      <option value="Bogotá">Bogotá</option>
+      <option value="Ibague">Ibague</option>
+      <option value="Neiva">Neiva</option>
+    </select>
+
+    <label for="mensaje">Mensaje</label>
+    <textarea
+      id="mensaje"
+      formControlName="mensajes"
+      placeholder="Escribe tu mensaje.."
+      style="height: 200px"
+    ></textarea>
+    <button type="submit" [disabled]="!contactoForm.valid">
+      Enviar Mensaje
+    </button>
+  </form>
+</div>
+<br />
+
+<p>Nombre: {{ contactoForm.value.nombres }}</p>
+<p>Apellido: {{ contactoForm.value.apellidos }}</p>
+<p>Mensaje: {{ contactoForm.value.mensajes }}</p>
+<p>Ciudad: {{ contactoForm.value.ciudad }}</p>

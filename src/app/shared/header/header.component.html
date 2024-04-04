@@ -1,0 +1,21 @@
+<header>
+  <div>
+    <img src="../../../assets/images/logo.png" alt="" width="50rem" />
+  </div>
+  <nav>
+    <ul>
+      <li><a [routerLink]="ROUTER_APP.INICIO">Home</a></li>
+      <li><a [routerLink]="ROUTER_APP.ACERCA_DE">About</a></li>
+      <li><a [routerLink]="ROUTER_APP.SERVICIO">Service</a></li>
+      <li><a [routerLink]="ROUTER_APP.USUARIOS">usuario</a></li>
+      <li><a [routerLink]="ROUTER_APP.CONTACTO">Contact</a></li>
+      <li *appPermisos="['USER']">
+        <a [routerLink]="ROUTER_APP.CLIENTES">Clients</a>
+      </li>
+      <li (click)="cerrarSesion()" class="btn btn-primary">Cerrar Sesion</li>
+    </ul>
+  </nav>
+</header>
+
+<app-contador (incrementarValor)="recibirContador($event)"></app-contador>
+Este es el valor = {{ contador }}

@@ -1,0 +1,39 @@
+<hr/>
+
+<h2 class="title">{{titulo}}</h2>
+<span>{{edad}}</span>
+
+@if(ocultar) {
+    <p class="parrafo">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero non, velit, dolores esse quaerat facilis odio blanditiis ex ipsum inventore vitae laborum magnam recusandae voluptatem impedit deleniti nulla commodi quasi.
+        Praesentium, error delectus quod saepe quas commodi exercitationem labore dolore doloremque, id veniam aliquid et numquam ab, dicta quia! Tempora quo dignissimos autem quae harum! Error corrupti facilis commodi sequi?
+        Nesciunt sit incidunt error minima veniam. Maxime, ad inventore dicta cupiditate numquam ullam autem sed saepe! Maxime ducimus consequuntur nulla! Doloremque aliquam suscipit adipisci quam quis reiciendis assumenda ea placeat.
+    </p>
+}
+<app-tabla [usuarios]="users" [tituloTabla]="tituloTabla"></app-tabla>
+<h3> Este es el contador</h3>
+<app-contador (incrementarValor)="recibirContador($event)"></app-contador>
+Este es el valor = {{contador}}
+<!-- <div style="display: flex; align-items: center; justify-content: center;">
+    <table class="tabla">
+        <thenumber = 0;
+            <tr style="border: 1px solid;">
+                <th style="border: 1px solid;">ID</th>
+                <th style="border: 1px solid;">Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(user of users; track $index){
+                <tr>
+                    <td>
+                        {{user.id+1}}
+                    </td>
+                    <td>
+                        {{user.name}}
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+</div> -->
